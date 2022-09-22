@@ -24,7 +24,7 @@ export function DashboardContent({ id, author, children }) {
           </blockquote>
           <figcaption className="mt-10 flex items-center sm:justify-center">
             <div className="ml-4">
-              <div className="text-base font-medium leading-6 tracking-tight text-slate-900">
+              <div className="cursor-pointer text-base font-medium leading-6 tracking-tight text-slate-900">
                 https://www.def.com/myusername
               </div>
             </div>
