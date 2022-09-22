@@ -9,6 +9,8 @@ const UserSchema = new Schema(
 
     password: { type: String, required: true, select: false },
 
+    userId: { type: String },
+
     role: { type: String, default: 'user', enum: ['user', 'root'] },
 
     resetToken: { type: String },
