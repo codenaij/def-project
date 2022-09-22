@@ -5,6 +5,7 @@ import { GridPattern } from '@/components/GridPattern'
 import coverImage from '@/images/img.jpg'
 import { useLayoutEffect } from 'react'
 import gsap from 'gsap'
+// import
 
 export function Hero() {
   const tl = gsap.timeline()
