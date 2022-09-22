@@ -19,7 +19,7 @@ export default function Example() {
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden"></div>
               <div className="inline-flex items-center justify-center rounded-md p-2 text-blue-400 hover:bg-blue-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                 <div className="flex flex-shrink-0 items-center">
-                  <h6 className="font-display text-5xl font-extrabold text-white sm:text-6xl">
+                  <h6 className="font-display text-5xl font-extrabold tracking-wider text-white sm:text-4xl">
                     DEF
                   </h6>
                 </div>
