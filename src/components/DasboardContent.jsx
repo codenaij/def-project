@@ -13,7 +13,7 @@ export function DashboardContent({ id, user, children }) {
 
   useEffect(() => {
     setUserId(user.userId)
-    setReferralLink(`https://www.def.com/register?ref=${userId}`)
+    setReferralLink(`https://www.defnigeria.com/register?ref=${userId}`)
   }, [user, userId])
 
   useEffect(() => {
