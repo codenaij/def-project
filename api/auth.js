@@ -6,6 +6,19 @@ const bcrypt = require('bcryptjs')
 const isEmail = require('validator/lib/isEmail')
 const authMiddleware = require('../middleware/authMiddleware')
 
+router.get('/', authMiddleware, async (req, res) => {
+  const { userId } = req
+
+  try {
+    const user = await UserModel.findById(userId)
+
+    return res.status(200).json({ user })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).send(`Server error`)
+  }
+})
+
 router.post('/', async (req, res) => {
   const { email, password } = req.body
 

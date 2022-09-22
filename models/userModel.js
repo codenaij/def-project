@@ -9,13 +9,15 @@ const UserSchema = new Schema(
 
     password: { type: String, required: true, select: false },
 
-    userId: { type: String },
+    userId: { type: String, unique: true },
 
     role: { type: String, default: 'user', enum: ['user', 'root'] },
 
     resetToken: { type: String },
 
     expireToken: { type: Date },
+
+    referredBy: { type: String },
   },
   { timestamps: true }
 )

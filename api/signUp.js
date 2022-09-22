@@ -6,10 +6,8 @@ const jwt = require('jsonwebtoken')
 const bcrypt = require('bcryptjs')
 const isEmail = require('validator/lib/isEmail')
 
-const regexUserName = /^(?!.*\.\.)(?!.*\.$)[^\W][\w.]{0,29}$/
-
 router.post('/', async (req, res) => {
-  const { name, email, password } = req.body
+  const { name, email, password, referral } = req.body
 
   if (!isEmail(email)) return res.status(401).send('Invalid Email')
 
@@ -24,10 +22,14 @@ router.post('/', async (req, res) => {
       return res.status(401).send('User already registered')
     }
 
+    const emailSplit = email.split('@')[0]
+
     user = new UserModel({
       name,
       email: email.toLowerCase(),
       password,
+      userId: emailSplit,
+      referredBy: referral,
     })
 
     user.password = await bcrypt.hash(password, 10)

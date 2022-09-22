@@ -8,6 +8,7 @@ export const registerUser = async (
   name,
   email,
   password,
+  referral,
   setLoading,
   setError
 ) => {
@@ -16,6 +17,7 @@ export const registerUser = async (
       name,
       email,
       password,
+      referral,
     })
 
     console.log(res.data)
@@ -34,6 +36,7 @@ export const loginUser = async (email, password, setError, setLoading) => {
     const res = await axios.post(`${baseUrl}/api/auth`, { email, password })
 
     setToken(res.data)
+    console.log(res.data)
   } catch (error) {
     const errorMsg = catchErrors(error)
     setError(errorMsg)

@@ -2,10 +2,37 @@ import Image from 'next/image'
 
 import { ButtonLink } from '@/components/Button'
 import { GridPattern } from '@/components/GridPattern'
-import { StarRating } from '@/components/StarRating'
 import coverImage from '@/images/img.jpg'
+import { useLayoutEffect } from 'react'
+import gsap from 'gsap'
 
 export function Hero() {
+  const tl = gsap.timeline()
+  useLayoutEffect(() => {
+    tl.to('.main-title', {
+      'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+      y: 0,
+      opacity: 1,
+      duration: 1.5,
+      ease: 'Power4.easeIn',
+    })
+    tl.to(
+      '.sub-title',
+      {
+        'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+        y: 0,
+        opacity: 1,
+        duration: 1.5,
+        ease: 'Power4.easeIn',
+      },
+      '-=1.2'
+    )
+    tl.to('.hero-image', {
+      x: 0,
+      opacity: 1,
+      duration: 1.3,
+    })
+  }, [])
   return (
     <header className="overflow-hidden bg-slate-100 lg:bg-transparent lg:px-5">
       <div className="mx-auto grid max-w-6xl grid-cols-1 grid-rows-[auto_1fr] gap-y-16 pt-16 md:pt-20 lg:grid-cols-12 lg:gap-y-20 lg:px-3 lg:pb-36 lg:pt-20 xl:py-32">
@@ -35,9 +62,9 @@ export function Hero() {
         </div>
         <div className="bg-white pt-16 lg:col-span-7 lg:bg-transparent lg:pt-0 lg:pl-16 xl:pl-20">
           <div className="mx-auto px-4 sm:px-6 md:max-w-2xl md:px-4 lg:px-0">
-              <h1 className="main-title font-display text-5xl font-extrabold text-slate-900 sm:text-6xl">
-                The Digital Economy Forum (DEF)
-              </h1>
+            <h1 className="main-title font-display text-5xl font-extrabold text-slate-900 sm:text-6xl">
+              The Digital Economy Forum (DEF)
+            </h1>
             <p className="sub-title mt-4 text-3xl text-slate-600">
               Nigeria's digital transformation
             </p>

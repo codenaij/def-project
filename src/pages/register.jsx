@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useRouter } from 'next/router'
+import { useEffect, useState } from 'react'
 import { registerUser } from 'utils/authUser'
 
 export default function Register() {
@@ -9,10 +10,17 @@ export default function Register() {
   const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
   const [errorMsg, setErrorMsg] = useState(null)
+  const [referral, setReferral] = useState(null)
+
+  const router = useRouter()
+
+  useEffect(() => {
+    setReferral(router.query.ref)
+  }, [])
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await registerUser(name, email, password, setLoading, setErrorMsg)
+    await registerUser(name, email, password, referral, setLoading, setErrorMsg)
   }
   return (
     <>
