@@ -23,8 +23,8 @@ export function Subscribe() {
               Be part of this movement
             </h2>
             <p className="mt-4 text-lg tracking-tight text-blue-200">
-              Enter your email address and We'll contact you for more details on
-              how to be part ofus.
+              Enter your email address and We&apos;ll contact you for more
+              details on how to be part ofus.
             </p>
           </div>
           <form className="lg:pl-16">

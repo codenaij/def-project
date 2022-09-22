@@ -66,7 +66,7 @@ export function Hero() {
               The Digital Economy Forum (DEF)
             </h1>
             <p className="sub-title mt-4 text-3xl text-slate-600">
-              Nigeria's digital transformation
+              Nigeria&apos;s digital transformation
             </p>
             <div className="mt-8 flex space-x-4">
               <ButtonLink href="/register" color="blue">
