@@ -1,0 +1,10 @@
+.main-title,
+.sub-title {
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  transform: translateY(30px);
+  opacity: 0;
+}
+.hero-image {
+  transform: translateX(-80px);
+  opacity: 0;
+}
