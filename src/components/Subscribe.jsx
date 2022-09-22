@@ -5,11 +5,11 @@ import { Pattern } from '@/components/Pattern'
 export function Subscribe() {
   return (
     <section
-      id="free-chapters"
-      aria-labelledby="free-chapters-title"
+      id="register"
+      aria-labelledby="pters-title"
       className="scroll-mt-14 bg-blue-600 sm:scroll-mt-32"
     >
-      <h2 id="free-chapters-title" className="sr-only">
+      <h2 id="register-title" className="sr-only">
         Join us
       </h2>
       <div className="overflow-hidden lg:relative">

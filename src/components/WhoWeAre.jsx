@@ -82,7 +82,7 @@ export function WhoWeAre() {
 
         <p className="mt-10">
           <a
-            href="#free-chapters"
+            href="#donate"
             className="text-base font-medium tracking-tight text-blue-600 hover:text-blue-800"
           >
             Donate to us &rarr;

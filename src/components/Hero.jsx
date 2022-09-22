@@ -42,11 +42,11 @@ export function Hero() {
               Nigeria's digital transformation
             </p>
             <div className="mt-8 flex space-x-4">
-              <ButtonLink href="#free-chapters" color="blue">
+              <ButtonLink href="/register" color="blue">
                 Register
               </ButtonLink>
-              <ButtonLink href="#donate" variant="outline" color="blue">
-                Donate
+              <ButtonLink href="/login" variant="outline" color="blue">
+                Login
               </ButtonLink>
             </div>
           </div>
