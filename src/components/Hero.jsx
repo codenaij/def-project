@@ -5,7 +5,6 @@ import { GridPattern } from '@/components/GridPattern'
 import coverImage from '@/images/img.jpg'
 import { useLayoutEffect } from 'react'
 import gsap from 'gsap'
-// import
 
 export function Hero() {
   const tl = gsap.timeline()
@@ -69,7 +68,7 @@ export function Hero() {
             <p className="sub-title mt-4 text-3xl text-slate-600">
               Nigeria&apos;s digital transformation
             </p>
-            <div className="mt-8 flex space-x-4">
+            <div className="mb-10 mt-8 flex space-x-4">
               <ButtonLink href="/register" color="blue">
                 Register
               </ButtonLink>
