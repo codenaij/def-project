@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 import { GridPattern } from '@/components/GridPattern'
 import { SectionHeading } from '@/components/SectionHeading'
-import atiku from '@/images/atiku.jpeg'
+import atiku from '@/images/atiku.jpg'
 
 export function Candidate() {
   return (

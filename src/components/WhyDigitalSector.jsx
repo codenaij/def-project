@@ -8,6 +8,7 @@ import discordImage from '@/images/resources/discord.svg'
 import figmaImage from '@/images/resources/figma.svg'
 import gdp from '@/images/gdp.png'
 import graph from '@/images/graph.png'
+import dollar from '@/images/def.jpeg'
 import videoPlayerImage from '@/images/resources/video-player.svg'
 
 const resources = [
@@ -30,7 +31,7 @@ const resources = [
     image: function VideoPlayerImage() {
       return (
         <div className="absolute inset-0 flex items-center justify-center bg-[radial-gradient(#2C313D_35%,#000)]">
-          <Image src={graph} height="140" width="140" alt="" />
+          <Image src={dollar} height="140" width="140" alt="" />
         </div>
       )
     },
