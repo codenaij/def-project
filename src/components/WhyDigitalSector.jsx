@@ -3,13 +3,10 @@ import Image from 'next/image'
 import { ButtonLink } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { SectionHeading } from '@/components/SectionHeading'
-import abstractBackgroundImage from '@/images/resources/abstract-background.png'
-import discordImage from '@/images/resources/discord.svg'
-import figmaImage from '@/images/resources/figma.svg'
+
 import gdp from '@/images/gdp.png'
 import graph from '@/images/graph.png'
-import dollar from '@/images/def.jpeg'
-import videoPlayerImage from '@/images/resources/video-player.svg'
+import defLogo from '@/images/def-logo.png'
 
 const resources = [
   {
@@ -30,8 +27,8 @@ const resources = [
       'With the ever urgent need to diversify the Nigerian Economy and plan for a future with energy transition, supporting the growth of a Digital Economy is the most sensible thing to do.',
     image: function VideoPlayerImage() {
       return (
-        <div className="absolute inset-0 flex items-center justify-center bg-[radial-gradient(#2C313D_35%,#000)]">
-          <Image src={dollar} height="140" width="140" alt="" />
+        <div className="absolute inset-0 flex items-center justify-center bg-[radial-gradient(#c4c4c4_35%,#ccc)]">
+          <Image src={defLogo} height="140" width="140" alt="" />
         </div>
       )
     },
