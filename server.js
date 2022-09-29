@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const cors = require('cors')
 const server = require('http').Server(app)
 const next = require('next')
 const dev = process.env.NODE_ENV !== 'production'
@@ -9,6 +10,7 @@ require('dotenv').config({ path: './config.env' })
 const connectDb = require('./utilsServer/connectDb')
 connectDb()
 app.use(express.json())
+app.use(cors())
 const PORT = process.env.PORT || 3000
 
 nextApp.prepare().then(() => {
